@@ -304,6 +304,7 @@ namespace Validation
 
         private void UpdateList(object sender, SelectionChangedEventArgs e)
         {
+            if (Classifications.SelectedItem == null) return;
             var selectedCode = Classifications.SelectedItem.ToString();
 
             // var tS = new Dictionary<string, Asset>();

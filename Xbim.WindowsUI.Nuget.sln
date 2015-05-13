@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbim.Presentation", "Xbim.Presentation\Xbim.Presentation.csproj", "{89F98E53-DE4E-4427-8244-D5934AD08849}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XbimXplorer", "XbimXplorer\XbimXplorer.csproj", "{D6CED5D7-BE37-4A32-90A5-1444C9FFDD91}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1E708A3F-4EB6-4BFD-98AE-FF3EFB60B78B} = {1E708A3F-4EB6-4BFD-98AE-FF3EFB60B78B}
+		{845161EC-C065-413E-8B0B-C4C1D2C6449D} = {845161EC-C065-413E-8B0B-C4C1D2C6449D}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E199F75-F5E2-4B21-9DDA-85AF017F9445}"
 	ProjectSection(SolutionItems) = preProject
