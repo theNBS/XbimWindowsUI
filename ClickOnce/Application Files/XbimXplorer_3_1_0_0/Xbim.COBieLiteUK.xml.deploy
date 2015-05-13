@@ -1,0 +1,810 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xbim.COBieLiteUK</name>
+    </assembly>
+    <members>
+        <member name="T:Xbim.COBieLiteUK.Assembly">
+            
+                   Assembly is a named physical aggregation of a Type or Component into another Type or
+                   Component where both the overall (owning) assembly part and the constituent
+                   (owned) part has significance for their operation and use.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.CobieObject.ShouldSerializeCreatedOn">
+            <summary>
+            Test whether CreatedOn should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Asset">
+            
+                   Named and individually scheduled physical items and features that might require
+                   management, such as inspection, maintenance, servicing or replacement, during
+                   the in-use phase.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Asset.ShouldSerializeInstallationDate">
+            <summary>
+            Test whether InstallationDate should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Asset.ShouldSerializeWarrantyStartDate">
+            <summary>
+            Test whether WarrantyStartDate should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.AssetType">
+            
+                   Asset type is a named specification for Components including equipment, products and materials.
+                   A minimum of one COBie.Type record is required for all COBie deliverables related to equipment Type information.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeReplacementCost">
+            <summary>
+            Test whether ReplacementCost should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeExpectedLife">
+            <summary>
+            Test whether ExpectedLife should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeDurationUnit">
+            <summary>
+            Test whether DurationUnit should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeNominalLength">
+            <summary>
+            Test whether NominalLength should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeNominalWidth">
+            <summary>
+            Test whether NominalWidth should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.AssetType.ShouldSerializeNominalHeight">
+            <summary>
+            Test whether NominalHeight should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Attribute">
+            
+                   Attribute is a named specific characteristic associated to an asset or other information objects.
+                 
+        </member>
+        <member name="P:Xbim.COBieLiteUK.Attribute.PropertySetName">
+            <summary>
+            PropertySetName is a proxy property for ExternalEntity. It is not a part of the schema but it is part of the API to make sure the
+            data schema is used in an uniform way.
+            </summary>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.AttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.BooleanAttributeValue.ShouldSerializeValue">
+            <summary>
+            Test whether Value should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.BooleanAttributeValue.ShouldSerializeAllowedValue">
+            <summary>
+            Test whether AllowedValue should be serialized
+            </summary>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.BooleanAttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Connection">
+            
+                   Connection is a named logical relationship between two Components.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Contact">
+            
+                   Contact is a named person and/or organization involved in the Facility lifecycle.
+                 
+        </member>
+        <member name="P:Xbim.COBieLiteUK.Contact.Description">
+            <summary>
+            Description is invalid for Contact object
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DateTimeAttributeValue.ShouldSerializeValue">
+            <summary>
+            Test whether Value should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DateTimeAttributeValue.ShouldSerializeMinimalValue">
+            <summary>
+            Test whether MinimalValue should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DateTimeAttributeValue.ShouldSerializeMaximalValue">
+            <summary>
+            Test whether MaximalValue should be serialized
+            </summary>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.DateTimeAttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DecimalAttributeValue.ShouldSerializeValue">
+            <summary>
+            Test whether Value should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DecimalAttributeValue.ShouldSerializeMinimalValue">
+            <summary>
+            Test whether MinimalValue should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.DecimalAttributeValue.ShouldSerializeMaximalValue">
+            <summary>
+            Test whether MaximalValue should be serialized
+            </summary>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.DecimalAttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Document">
+            
+                   Document is a named external document associated to an asset or other information object.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Floor">
+            
+                   Floor is a named intermediate spatial subdivision, including distinct vertical levels and
+                   horizontal areas and sections with Spaces allocated.
+                   A minimum of one in COBie. Floor record is required for all COBie deliverables containing spatial information.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Floor.ShouldSerializeElevation">
+            <summary>
+            Test whether Elevation should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Floor.ShouldSerializeHeight">
+            <summary>
+            Test whether Height should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Impact">
+            
+                   Impact is a named economic and environmental measure.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Impact.ShouldSerializeLeadInTime">
+            <summary>
+            Test whether LeadInTime should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Impact.ShouldSerializeDuration">
+            <summary>
+            Test whether Duration should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Impact.ShouldSerializeLeadOutTime">
+            <summary>
+            Test whether LeadOutTime should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.IntegerAttributeValue.ShouldSerializeValue">
+            <summary>
+            Test whether Value should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.IntegerAttributeValue.ShouldSerializeMinimalValue">
+            <summary>
+            Test whether MinimalValue should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.IntegerAttributeValue.ShouldSerializeMaximalValue">
+            <summary>
+            Test whether MaximalValue should be serialized
+            </summary>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.IntegerAttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Issue">
+            
+                   Issue is a named deficiency in the information or risk associated to the assets or other information objects.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Job">
+            
+                   Job is a named task or activity during the in-use phase associated to Types.
+                   A minimum of one COBie.Job record is required for all relevant COBie.Type objects submitted at the benefical occupancy or
+                   facility handover stage.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeDuration">
+            <summary>
+            Test whether Duration should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeDurationUnit">
+            <summary>
+            Test whether DurationUnit should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeStart">
+            <summary>
+            Test whether Start should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeTaskStartUnit">
+            <summary>
+            Test whether TaskStartUnit should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeFrequency">
+            <summary>
+            Test whether Frequency should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Job.ShouldSerializeFrequencyUnit">
+            <summary>
+            Test whether FrequencyUnit should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Metadata">
+            
+                   This object contains metadata about the COBie like its version, target region or status of the data.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Resource">
+            
+                   Resource is a named material or skill required to execute Jobs.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Facility">
+            
+                   A type for the Facility element that is the root of a COBie document.
+                   Facility contains information about the facility being exchanged during a given COBie deliverable.
+                   Since COBie deliverables may be exchanged during planning, design, construction, handover, or operation
+                   phases there may be differences in facility designations.
+                   COBie files will typically contain a single facility.
+                   Facility is a named distinct operational built or geographic asset, typically a building or section
+                   of infrastructure along with details and extent of the geographic site and of the
+                   temporal project
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Facility.Create``1">
+            <summary>
+            Creates a new class inheryting from CobieObject and sets it to belong to the facility.
+            </summary>
+            <typeparam name="TNewCobieObject">The CobieObject type to create</typeparam>
+            <returns>the created object, which will have to be added to a collection as appropriate to be in the facility tree</returns>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Facility.Clone``1(``0)">
+            <summary>
+            Clones a provided cobieobject via JsonSeriliser and then sets the result to belong to the cloning facility.
+            </summary>
+            <typeparam name="TNewCobieObject">The type of the object to clone.</typeparam>
+            <param name="originalCobieObject">The CobieObject to be cloned via Json in memory.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Facility.Refresh">
+            <summary>
+            <p>
+            This function sets facility object to all CobieObjects in the model
+            so you can access referenced objects from keys as an enumerations.
+            If you create new objects in the model you should always call this 
+            method before you use any such enumerations. 
+            </p>
+            <p>
+            You don't have to call it after you read the model from JSON, COBie XLS or XML
+            as it is called automatically.
+            </p>
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Warranty">
+            
+                   This holds group of warranty related properties to make data model more granular
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Warranty.ShouldSerializeDurationParts">
+            <summary>
+            Test whether DurationParts should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Warranty.ShouldSerializeDurationLabor">
+            <summary>
+            Test whether DurationLabor should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Warranty.ShouldSerializeDurationUnit">
+            <summary>
+            Test whether DurationUnit should be serialized
+            </summary>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.milisecond">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.second">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.minute">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.hour">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.day">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.week">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.month">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.quarter">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.year">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.DurationUnit.asrequired">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Contact">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Facility">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Floor">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Space">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Zone">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.AssetType">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Asset">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.System">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Spare">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Resource">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.ProjectStage">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.EntityType.Notdefined">
+            <remarks/>
+        </member>
+        <member name="P:Xbim.COBieLiteUK.StringAttributeValue.AllowedValuesString">
+            <summary>
+            This is an infrastructure property used for COBie serialization/deserialization. Use Minimal, Maximal, Allowed values to set up the constrains
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Representation">
+            
+                   Representation (Coordinate) is a named position associated to Facility, Floor (region), Space (location), Component
+                   or Assembly.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Zone">
+            
+                   Zone is a named set of Spaces (locations) sharing a specific Attribute, such as activity, access,
+                   management or conditioning.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.System">
+            
+                   System is a named set of manageable Components providing a common function.
+                 
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Space">
+            
+                   Space is a named location for activities such as use, inspection or maintenance, including
+                   un‑occupied or un‑inhabitable Spaces, but not necessarily inaccessible voids.
+                   A minimum of one COBie.Space record is required for all COBie deliverables related to Space information.
+                 
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Space.ShouldSerializeUsableHeight">
+            <summary>
+            Test whether UsableHeight should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Space.ShouldSerializeGrossArea">
+            <summary>
+            Test whether GrossArea should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.Space.ShouldSerializeNetArea">
+            <summary>
+            Test whether NetArea should be serialized
+            </summary>
+        </member>
+        <member name="T:Xbim.COBieLiteUK.Spare">
+            
+                   Spare is a named replaceable part associated to Types.
+                 
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AssetPortability.Fixed">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AssetPortability.Moveable">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AssetPortability.notdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AssetPortability.userdefined">
+            <remarks/>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.ProjectStage.ShouldSerializeStart">
+            <summary>
+            Test whether Start should be serialized
+            </summary>
+        </member>
+        <member name="M:Xbim.COBieLiteUK.ProjectStage.ShouldSerializeEnd">
+            <summary>
+            Test whether End should be serialized
+            </summary>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.centimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.feet">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.inches">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.kilometers">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.meters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.miles">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.millimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.yards">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.notdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.LinearUnit.userdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squarecentimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squarefeet">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squareinches">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squarekilometers">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squaremeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squaremiles">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squaremillimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.squareyards">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.notdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.AreaUnit.userdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubiccentimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubicfeet">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubicinches">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubicmeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubicmillimeters">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.cubicyards">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.notdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.VolumeUnit.userdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.AED">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.AES">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ATS">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.AUD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BBD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BEG">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BGL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BHD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BMD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BND">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BRL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BSD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BWP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.BZD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CAD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CBD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CHF">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CLP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CNY">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CYS">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.CZK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.DDP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.DEM">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.DKK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.EGL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.EST">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.EUR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.FAK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.FIM">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.FJD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.FKP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.FRF">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.GBP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.GIP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.GMD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.GRX">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.HKD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.HUF">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ICK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.IDR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ILS">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.INR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.IRP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ITL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.JMD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.JOD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.JPY">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.KES">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.KRW">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.KWD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.KYD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.LKR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.LUF">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.MTL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.MUR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.MXN">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.MYR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.NLG">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.NZD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.OMR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.PGK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.PHP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.PKR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.PLN">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.PTN">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.QAR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.RUR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.SAR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.SCR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.SEK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.SGD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.SKP">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.THB">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.TRL">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.TTD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.TWD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.USD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.VEB">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.VND">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.XEU">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ZAR">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.ZWD">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.NOK">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.notdefined">
+            <remarks/>
+        </member>
+        <member name="F:Xbim.COBieLiteUK.CurrencyUnit.userdefined">
+            <remarks/>
+        </member>
+    </members>
+</doc>
