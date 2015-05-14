@@ -129,6 +129,7 @@ namespace Validation
             this.SetBinding(ModelProperty, new Binding()); // whole datacontext binding, see http://stackoverflow.com/questions/8343928/how-can-i-create-a-binding-in-code-behind-that-doesnt-specify-a-path
 
             // Create shortcuts to the exe
+            CreateShortcut();
         }
 
         private void CreateShortcut()
@@ -136,7 +137,7 @@ namespace Validation
             try
             {
                 string shortcutAddress = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) + @"\Programs\xBIM Team\xBIM Toolkit\dPOW Validation.lnk";
-                string targetPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"Plugins\XplorerPlugins.DPoWValidation\Xbim.WindowsUI.DPoWValidation.exe");
+                string targetPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"Xbim.WindowsUI.DPoWValidation.exe");
 
                 if (!System.IO.File.Exists(shortcutAddress))
                 {
@@ -150,7 +151,7 @@ namespace Validation
                     shortcut.Save();
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 // Doesn't matter if this crashes
             }

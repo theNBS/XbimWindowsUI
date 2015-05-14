@@ -44,8 +44,8 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>3.1.0.0</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>3.1.0.1</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -116,6 +116,16 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Esent.Interop">
       <HintPath>..\packages\ManagedEsent.1.9.2.0\lib\net40\Esent.Interop.dll</HintPath>
@@ -417,12 +427,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="RIBAEnterprisesCodeSigning2013-16.pfx" />
-    <None Include="ribae_code_sign.pfx" />
     <None Include="Templates\ClassifyModelToNRM.bql" />
     <None Include="Templates\EmbeddedNRM.bql" />
     <None Include="Xbim.Script.dll.config" />
-    <None Include="XbimXplorer_1_TemporaryKey.pfx" />
-    <None Include="XbimXplorer_TemporaryKey.pfx" />
     <Resource Include="xBimQueryLogo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -484,7 +491,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Esent.Interop.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Esent.Interop.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -494,7 +501,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Esent.Interop.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Esent.Interop.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -504,7 +511,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\HelixToolkit.Wpf.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\HelixToolkit.Wpf.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -514,7 +521,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\HelixToolkit.Wpf.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\HelixToolkit.Wpf.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -524,7 +531,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\log4net.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\log4net.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -534,7 +541,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Microsoft.Practices.Unity.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Microsoft.Practices.Unity.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -544,7 +551,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Newtonsoft.Json.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Newtonsoft.Json.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -554,7 +561,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\NPOI.OOXML.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\NPOI.OOXML.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -564,7 +571,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\NPOI.OpenXml4Net.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\NPOI.OpenXml4Net.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -574,7 +581,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\NPOI.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\NPOI.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -584,7 +591,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBie.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBie.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -594,7 +601,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBie.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBie.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -604,7 +611,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLite.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLite.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -614,7 +621,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLite.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLite.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -624,7 +631,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLiteUK.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLiteUK.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -634,7 +641,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLiteUK.Validation.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLiteUK.Validation.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -644,7 +651,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLiteUK.Validation.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLiteUK.Validation.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -654,7 +661,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.COBieLiteUK.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.COBieLiteUK.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -664,7 +671,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Common.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Common.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -674,7 +681,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Common.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Common.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -684,7 +691,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.DPoW.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.DPoW.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -694,7 +701,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.DPoW.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.DPoW.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -704,7 +711,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Exchanger.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Exchanger.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -714,7 +721,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Exchanger.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Exchanger.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -724,7 +731,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Geometry.Engine.Interop.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Geometry.Engine.Interop.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -734,7 +741,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Geometry.Engine.Interop.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Geometry.Engine.Interop.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -744,7 +751,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Ifc.Extensions.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Ifc.Extensions.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -754,7 +761,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Ifc.Extensions.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Ifc.Extensions.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -764,7 +771,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Ifc2x3.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Ifc2x3.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -774,7 +781,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Ifc2x3.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Ifc2x3.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -784,7 +791,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.IO.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.IO.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -794,7 +801,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.IO.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.IO.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -804,7 +811,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.ModelGeometry.Scene.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.ModelGeometry.Scene.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -814,7 +821,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.ModelGeometry.Scene.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.ModelGeometry.Scene.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -824,7 +831,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Presentation.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Presentation.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -834,7 +841,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Presentation.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Presentation.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -844,7 +851,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Script.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Script.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -854,7 +861,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Script.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Script.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -864,7 +871,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Tessellator.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Tessellator.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -874,7 +881,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.Tessellator.xml">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.Tessellator.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -884,7 +891,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\Xbim.WindowsUI.DPoWValidation.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Xbim.WindowsUI.DPoWValidation.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -894,17 +901,17 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\XplorerPlugins.DPoWValidation.exe">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\XplorerPlugins.DPoWValidation.pdb">
       <Visible>False</Visible>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\PluginDPoWValidation\XplorerPlugins.DPoWValidation.pdb">
+    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\XplorerPlugins.DPoWValidation.vshost.exe">
       <Visible>False</Visible>
       <Group>
       </Group>
