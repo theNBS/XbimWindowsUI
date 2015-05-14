@@ -17,6 +17,7 @@ using Xbim.COBieLiteUK;
 using Xbim.IO;
 using System.Collections.ObjectModel;
 using Xbim.CobieLiteUK.Validation;
+using IWshRuntimeLibrary;
 
 namespace Validation
 {
@@ -24,7 +25,7 @@ namespace Validation
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     [XplorerUiElement]
-    public partial class MainWindow : UserControl, IXbimXplorerPluginWindow 
+    public partial class MainWindow : UserControl, IXbimXplorerPluginWindow
     {
         public MainWindow()
         {
@@ -36,7 +37,7 @@ namespace Validation
 
         private void OpenFile(object sender, RoutedEventArgs e)
         {
-            var supportedFiles = new []
+            var supportedFiles = new[]
             {
                 "All supprted files|*.xlsx;*.xls;*.xml;*.json",
                 "Validation requirement Excel|*.xlsx;*.xls",
@@ -46,7 +47,7 @@ namespace Validation
 
             var openFile = new OpenFileDialog();
             openFile.Filter = string.Join("|", supportedFiles);
-                    
+
             var res = openFile.ShowDialog();
 
             if (res.HasValue && res.Value)
@@ -81,10 +82,10 @@ namespace Validation
                     Classifications.SelectedItem = 0;
                 }
             }
-            catch 
+            catch
             {
 
-            }            
+            }
         }
 
         private bool IsFileOpen
@@ -113,8 +114,8 @@ namespace Validation
 
         public Visibility OpenButtonVisibility { get { return (IsFileOpen) ? System.Windows.Visibility.Hidden : System.Windows.Visibility.Visible; } }
         public Visibility UIVisibility { get { return (!IsFileOpen) ? System.Windows.Visibility.Hidden : System.Windows.Visibility.Visible; } }
-        
-       
+
+
         private IXbimXplorerPluginMasterWindow xpWindow;
 
         // ---------------------------
@@ -126,6 +127,33 @@ namespace Validation
             xpWindow = mainWindow;
             this.SetBinding(SelectedItemProperty, new Binding("SelectedItem") { Source = mainWindow, Mode = BindingMode.OneWay });
             this.SetBinding(ModelProperty, new Binding()); // whole datacontext binding, see http://stackoverflow.com/questions/8343928/how-can-i-create-a-binding-in-code-behind-that-doesnt-specify-a-path
+
+            // Create shortcuts to the exe
+        }
+
+        private void CreateShortcut()
+        {
+            try
+            {
+                string shortcutAddress = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) + @"\Programs\xBIM Team\xBIM Toolkit\dPOW Validation.lnk";
+                string targetPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"Plugins\XplorerPlugins.DPoWValidation\Xbim.WindowsUI.DPoWValidation.exe");
+
+                if (!System.IO.File.Exists(shortcutAddress))
+                {
+                    // Create start menu icon
+                    WshShell shell = new WshShell();
+                    IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
+
+                    shortcut.TargetPath = targetPath;
+                    shortcut.WorkingDirectory = System.IO.Path.GetDirectoryName(targetPath);
+                
+                    shortcut.Save();
+                }
+            }
+            catch
+            {
+                // Doesn't matter if this crashes
+            }
         }
 
         // SelectedEntity
@@ -143,30 +171,30 @@ namespace Validation
         private static void OnSelectedEntityChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var ctrl = d as MainWindow;
-            if (ctrl == null) 
+            if (ctrl == null)
                 return;
             switch (e.Property.Name)
             {
                 case "Model":
-                {
-                    var model = e.NewValue as XbimModel;
-                    if (model != null)
                     {
-                        try
+                        var model = e.NewValue as XbimModel;
+                        if (model != null)
                         {
-                            ctrl.ModelFacility = FacilityFromIfcConverter.FacilityFromModel(model);
+                            try
+                            {
+                                ctrl.ModelFacility = FacilityFromIfcConverter.FacilityFromModel(model);
+                            }
+                            catch (Exception ex)
+                            {
+                                ctrl.ModelFacility = null;
+                            }
                         }
-                        catch (Exception ex)
-                        {
+                        else
                             ctrl.ModelFacility = null;
-                        }
-                    }
-                    else
-                        ctrl.ModelFacility = null;
-                    // ctrl.FacilityViewer.DataContext = new DPoWFacilityViewModel(ctrl.ModelFacility);
-                    ctrl.TestValidation();
+                        // ctrl.FacilityViewer.DataContext = new DPoWFacilityViewModel(ctrl.ModelFacility);
+                        ctrl.TestValidation();
 
-                }
+                    }
                     break;
                 case "SelectedEntity":
                     break;
@@ -198,7 +226,7 @@ namespace Validation
         internal Facility ValFacility = null;
         internal Facility ViewFacility = null;
 
-        
+
         public string MenuText
         {
             get { return "DPoW Validation"; }
@@ -241,7 +269,7 @@ namespace Validation
             IsFileOpen = false;
         }
 
-      
+
 
         private void AddComment(object sender, RoutedEventArgs e)
         {
@@ -290,8 +318,8 @@ namespace Validation
 
         private void TranspToggle(object sender, MouseButtonEventArgs e)
         {
-            UnMatched.Fill = _useAmber 
-                ? Brushes.Transparent 
+            UnMatched.Fill = _useAmber
+                ? Brushes.Transparent
                 : Brushes.Orange;
 
             _useAmber = !_useAmber;
@@ -323,9 +351,9 @@ namespace Validation
                 foreach (var asset in assetType.Assets)
                 {
                     lst.Add(new AssetViewModel(asset));
-                }               
+                }
             }
-            LstAssets.ItemsSource = lst;    
+            LstAssets.ItemsSource = lst;
         }
 
         private void GotoAsset(object sender, MouseButtonEventArgs e)
