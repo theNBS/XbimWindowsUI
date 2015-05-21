@@ -511,37 +511,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
-    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\HelixToolkit.Wpf.pdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\HelixToolkit.Wpf.xml">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
     <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\log4net.xml">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Plugins\XplorerPlugins.DPoWValidation\Microsoft.Practices.Unity.xml">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -934,7 +904,7 @@
   <ItemGroup>
     <Content Include="$(SolutionDir)PluginDPoWValidation\bin\Release\**\*">
       <Link>Plugins\XplorerPlugins.DPoWValidation\%(RecursiveDir)%(Filename)%(Extension)</Link>
-      <Visible>false</Visible>
+      <Visible>true</Visible>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
