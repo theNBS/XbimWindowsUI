@@ -99,12 +99,12 @@ namespace Validation
             {
                 if (value == true)
                 {
-                    UI.Visibility = System.Windows.Visibility.Visible;
+                    Ui.Visibility = System.Windows.Visibility.Visible;
                     OpenButton.Visibility = System.Windows.Visibility.Hidden;
                 }
                 else
                 {
-                    UI.Visibility = System.Windows.Visibility.Hidden;
+                    Ui.Visibility = System.Windows.Visibility.Hidden;
                     OpenButton.Visibility = System.Windows.Visibility.Visible;
                 }
                 //PropertyChanged.Invoke(this, new PropertyChangedEventArgs("OpenButtonVisibility"));
@@ -113,18 +113,18 @@ namespace Validation
         }
 
         public Visibility OpenButtonVisibility { get { return (IsFileOpen) ? System.Windows.Visibility.Hidden : System.Windows.Visibility.Visible; } }
-        public Visibility UIVisibility { get { return (!IsFileOpen) ? System.Windows.Visibility.Hidden : System.Windows.Visibility.Visible; } }
+        public Visibility UiVisibility { get { return (!IsFileOpen) ? System.Windows.Visibility.Hidden : System.Windows.Visibility.Visible; } }
 
 
-        private IXbimXplorerPluginMasterWindow xpWindow;
+        private IXbimXplorerPluginMasterWindow _xpWindow;
 
         // ---------------------------
         // plugin system related stuff
         //
 
-        public void BindUI(IXbimXplorerPluginMasterWindow mainWindow)
+        public void BindUi(IXbimXplorerPluginMasterWindow mainWindow)
         {
-            xpWindow = mainWindow;
+            _xpWindow = mainWindow;
             this.SetBinding(SelectedItemProperty, new Binding("SelectedItem") { Source = mainWindow, Mode = BindingMode.OneWay });
             this.SetBinding(ModelProperty, new Binding()); // whole datacontext binding, see http://stackoverflow.com/questions/8343928/how-can-i-create-a-binding-in-code-behind-that-doesnt-specify-a-path
 
@@ -256,11 +256,11 @@ namespace Validation
         }
 
 
-        public PluginWindowDefaultUIShow DefaultUIActivation
-        { get { return PluginWindowDefaultUIShow.onLoad; } }
+        public PluginWindowDefaultUiShow DefaultUiActivation
+        { get { return PluginWindowDefaultUiShow.OnLoad; } }
 
-        public PluginWindowDefaultUIContainerEnum DefaultUIContainer
-        { get { return PluginWindowDefaultUIContainerEnum.LayoutAnchorable; } }
+        public PluginWindowDefaultUiContainerEnum DefaultUiContainer
+        { get { return PluginWindowDefaultUiContainerEnum.LayoutAnchorable; } }
 
         private void CloseFile(object sender, RoutedEventArgs e)
         {
@@ -328,7 +328,7 @@ namespace Validation
 
         private void LstClassResults_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            xpWindow.DrawingControl.ZoomSelected();
+            _xpWindow.DrawingControl.ZoomSelected();
         }
 
         private void UpdateList(object sender, SelectionChangedEventArgs e)
@@ -359,7 +359,7 @@ namespace Validation
 
         private void GotoAsset(object sender, MouseButtonEventArgs e)
         {
-            xpWindow.DrawingControl.ZoomSelected();
+            _xpWindow.DrawingControl.ZoomSelected();
         }
 
         private void SetSelectedAsset(object sender, SelectionChangedEventArgs e)
@@ -370,7 +370,7 @@ namespace Validation
             var selectedLabel = avm.EntityLabel;
             if (!selectedLabel.HasValue)
                 return;
-            xpWindow.SelectedItem = Model.Instances[selectedLabel.Value];
+            _xpWindow.SelectedItem = Model.Instances[selectedLabel.Value];
         }
     }
 }
