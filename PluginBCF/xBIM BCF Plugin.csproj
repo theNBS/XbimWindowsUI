@@ -50,7 +50,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ionic.Zip">
@@ -62,6 +62,22 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -78,8 +94,32 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Xbim.COBie, Version=3.0.5625.24392, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.COBie.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.COBieLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.COBieLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.COBieLiteUK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.COBieLiteUK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.COBieLiteUK.Validation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.COBieLiteUK.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xbim.Common, Version=3.0.5620.24387, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xbim.Essentials.3.0.20\lib\net45\Xbim.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.DPoW, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.DPoW.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.Exchanger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Exchange.3.0.81.2\lib\net45\Xbim.Exchanger.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xbim.Geometry.Engine.Interop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -100,6 +140,10 @@
     </Reference>
     <Reference Include="Xbim.ModelGeometry.Scene, Version=3.0.5624.26271, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xbim.Geometry.3.0.21\lib\net45\Xbim.ModelGeometry.Scene.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xbim.Script, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xbim.Scripting.3.0.13\lib\net45\Xbim.Script.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xbim.Tessellator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -173,6 +217,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Classifications\NRM.csv" />
+    <None Include="Classifications\Uniclass 1.4.csv" />
+    <None Include="Classifications\Uniclass2-Ac.csv" />
+    <None Include="Classifications\Uniclass2-Co.csv" />
+    <None Include="Classifications\Uniclass2-Ee.csv" />
+    <None Include="Classifications\Uniclass2-Ef.csv" />
+    <None Include="Classifications\Uniclass2-En.csv" />
+    <None Include="Classifications\Uniclass2-PP.csv" />
+    <None Include="Classifications\Uniclass2-Pr.csv" />
+    <None Include="Classifications\Uniclass2-Sp.csv" />
+    <None Include="Classifications\Uniclass2-Ss.csv" />
+    <None Include="Classifications\Uniclass2-WR.csv" />
+    <None Include="Classifications\Uniclass2-Zz.csv" />
     <None Include="Examples\FromRevit.bcfzip" />
     <None Include="Examples\FromTekla.bcfzip" />
     <None Include="packages.config">
@@ -183,6 +240,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Templates\ClassifyModelToNRM.bql" />
+    <None Include="Templates\EmbeddedNRM.bql" />
+    <None Include="Xbim.Script.dll.config" />
     <None Include="xsd\markup.xsd">
       <SubType>Designer</SubType>
     </None>
