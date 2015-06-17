@@ -926,14 +926,7 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <FileAssociation Include=".xBIM">
-      <Visible>False</Visible>
-      <Description>xBIM files</Description>
-      <Progid>xBIM.Xplorer</Progid>
-      <DefaultIcon>xBIM.ico</DefaultIcon>
-    </FileAssociation>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="$(SolutionDir)PluginDPoWValidation\bin\Release\**\*">
       <Link>Plugins\XplorerPlugins.DPoWValidation\%(RecursiveDir)%(Filename)%(Extension)</Link>
